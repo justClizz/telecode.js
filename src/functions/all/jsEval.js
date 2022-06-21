@@ -2,7 +2,7 @@ module.exports = async (d) => {
   var code = d.inside;
   if (!code) {
     d.errorHandler.isError = true;
-    return d.errorHandler.message(`❌ TelesimpErr: Usage: $jsEval[code;show return? (yes/no) (optional, default: no)]!`);
+    return d.errorHandler.message(`❌ TelecodeError: Usage: $jsEval[code;show return? (yes/no) (optional, default: no)]!`);
   } else {
     code = code.split(";");
     var opts = "no"
@@ -32,7 +32,7 @@ module.exports = async (d) => {
       var evaled = await eval(code);
     } catch (err) {
       d.errorHandler.isError = true;
-      return d.errorHandler.message(`❌ TelesimpErr: $jsEval error: ${err}!`);
+      return d.errorHandler.message(`❌ TelecodeError: $jsEval error: ${err}!`);
     }
 
     if(opts === "yes") {
