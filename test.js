@@ -5,12 +5,17 @@ const bot = new Client({
 });
 
 bot.startCommand({
-  code: "Hello $message"
+  code: "Hello $authorUsername"
 });
 
 bot.command({
   name: "e",
   code: `$eval[$message]`
+});
+
+bot.command({
+  name: "js",
+  code: `$jsEval[$message;yes]`
 });
 
 bot.registerCommand();
