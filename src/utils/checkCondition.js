@@ -1,4 +1,4 @@
-const checkCondition = (cond) => {
+const checkCondition = (cond, err) => {
   const operators = () => {
     for (const op of ["<=", ">=", "<", ">", "==", "!="]) {
       if (cond.includes(op)) return op;
@@ -7,7 +7,8 @@ const checkCondition = (cond) => {
 
   const operator = operators();
   if(!operator) {
-    throw new Error("abc")
+    err.isError = true;
+    err.message("TelecodeError: checkCondition can't find the condition operators!")
   }
 
   const split = cond.split(operator);

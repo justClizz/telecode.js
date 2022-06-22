@@ -13,6 +13,6 @@ module.exports = async(d) => {
     return ""
   } else {
     d.errorHandler.isError = true;
-    return d.errorHandler.message("❌ TelecodeError: failed to deploy commands to command list in $deployCommandsList")
+    return d.errorHandler.message("TelecodeError: failed to deploy commands to command list in $deployCommandsList")
   }
 };
