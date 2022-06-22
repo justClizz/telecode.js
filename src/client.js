@@ -39,7 +39,7 @@ module.exports = class Client {
       });
 
       if (res.code) {
-        ctx.reply(res.code, { reply_markup: res.markup });
+        ctx.reply(res.code, res.options);
       }
     });
   }
