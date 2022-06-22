@@ -49,7 +49,7 @@ module.exports = async (d) => {
           if(err) {
             if (!suppressErr) {
               var def = notShowingLine? "" : " Line " + line
-              return ctx.reply("❌" + err.trim() + def)
+              return ctx.reply(`❌ \`${err.trim()} ${def}\``, { parse_mode: "MarkdownV2" })
             }
             return ctx.reply(suppressErr.trim().split("{error}").join(err).split("{line}").join(line))
           }
