@@ -6,3 +6,6 @@ Easy way to create Telegram bot.
 ```sh
 npm i github:justClizz/telecode.js
 ```
+
+Hi!
+Me and my friend (https://github.com/jastinXyz) finally decided to remake it. And this is still testing. So, stay tune!
